@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+
+    <h1>Imagen Dinamica</h1>
+    
+    <p>Tente abrir esse site em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+      <source media="(max-width: 550px )" srcset="imgens/foto-p.png" type="image/png">  
+      <source media="(max-width: 750px )" srcset="imgens/foto-m.png" type="image/png">
+      <img src="imgens/foto-g.png" alt="Imagen flexivel">
+    </picture>
+    
+    <p>Fotos em tamnahos diferentes</p>
+
+    <picture>
+        <source media="(max-width: 500px )" srcset="fotos/jeri-p.jpg" type="image/png">  
+        <source media="(max-width: 800px )" srcset="fotos/jeri-m.jpg" type="image/png">
+        <img src="fotos/jeri-g.jpg" alt="Imagen flexivel">
+      </picture>
+
+      <h1>Reproduzindo Audio</h1>
+
+      <p>Vamos aprender a reproduzir audios em HTML5.</p>
+       <audio src="media/happy-mistake.mp3" controls autoplay></audio> 
+
+
+       <p>Vamos aprender outra forma de reproduzir audios em HTML5.</p>
+<!--  Pesquisa varios tipos de audio como o source da imagem, qual o site for compativel ele carrega, porem necessita converter para cada um desses formatos-->
+       <audio preload="metadata" autoplay controls loop>
+       <source src="media/guanacast-33.mp3" type="audio/mpeg">
+       <source src="media/guanacast-33.mp3"" type="audio/ogg">
+       <source src="media/guanacast-33.mp3"" type="audio/wav"> <!-- Tentar evitar, muito pesados-->
+       <p>Infelismente seu navegador não consegue reproduzir audio
+       <a href="media/guanacast-33.mp3" download="media/guanacast-33.mp3" type="audio/mpeg">Clique aqui para baixar o arquivo MP3</a></p>
+       </audio>
+
+
+       <h1>Reproduzindo Videos</h1>
+
+       <p>Vamos aprender inserir Videos em HTML5</p>
+
+<video width="500"  controls autoplay>
+<source src="videos/VID-20180910-WA0011.webm" type="video/webm">
+<source src="videos/VID-20180910-WA0011.mp4" type="video/mp4">
+<source src="videos/VID-20180910-WA0011.ogg" type="video/ogg">
+</video><br>
+
+<video width="300"  controls autoplay loop>
+    <source src="videos/VID-20180915-WA0048.webm" type="video/webm">
+    <source src="videos/VID-20180915-WA0048.mp4" type="video/mp4">
+    <source src="videos/VID-20180915-WA0048.ogg" type="video/ogg">
+    </video><br>
+
+    <video width="300"  controls autoplay loop>
+        <source src="videos/VID-20181007-WA0009.webm" type="video/webm">
+        <source src="videos/VID-20181007-WA0009.mp4" type="video/mp4">
+        <source src="videos/VID-20181007-WA0009.ogg" type="video/ogg">
+        </video><br>
+
+</body>
+</html>
